@@ -1,29 +1,53 @@
-# Modelo 🧮🤖
+# Bienes 🧮🤖
 
-Spanish for Template, Modelo is a general purpose repo template for @tundradawn. I wanted to call it Nodelo, for node purposes... but if we need a template repo specfically for node i think we'll cross that road at that time.
+Spanish for Assets, Bienes is intended to store general Visual assets, experiments & elements created with p5.js.
 
 
-# Contents
 
-##### `.gitignore`
-- ignores node elements, common UNIX elements such as `.DS_Store` and more.
-- display successful authentication with slack
 
-##### `.editorconfig`
-- ensure spacing and other fine factors of the coding life are consistant acrosses not only IDE's but also OS enviroments.
-- gracefully error if auth is not correct
+# Structure
 
-##### `.eslintrc.js`
-- Contains common eslint rules with a small selection of simple ignores to aid in fast building of repos.
-- Uses the Airbnb ruleset thanks to the suggestion from @jadnco
+##### Experiment
+- An experiment will have it's own repo.
+- An experiment will have it's own unique folder.
 
-##### `.gitattributes`
-- Forces all binary and text files to follow consistant line ending rules, as some team members work with Windows and others Mac.
+##### Public
+- A global assets folder found in the root directory.
+- Has a `master.css` for quick-and-easy styling on new experiments
+- Has a `bundle.js` that contains a generic set of javascript.
+  - Possibly not needed for most usecases right now.
+- Common visual assets many experiments could benefit from.
 
-# Base Licence
-Why did i choose this licence? For this specific line right here:
-> When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.
+Bottom line? If more then one experiment will use the asset: put it in the public file. _Let's try not to change the public contents unnecessarly to avoid breaking experiments_
 
-_Found on [choosealicence.com](https://choosealicense.com/licenses/);_
+##### index.html
+Something that will navigate us to each experiment.
 
-This seems to be a good all around licence to ensure all parties are getting the same access to Opensource Software software..
+
+
+# Example:
+```
+.
+├── box-shader              [Experiment]
+│   ├── assets              [Experiment specific assets]
+│   │   ├── css
+│   │   │   └── style.css
+│   │   └── js
+│   │       └── main.js  
+│   └── index.html          [Experiment entry point]
+├── index.html              
+├── public                  [public assets multiple experiments use]
+│   ├── css
+│   │   └── master.css   
+│   └── js
+│       └── main.js      
+└── triangles-spinning      [Experiment]
+    ├── assets              [Experiment specific assets]
+    │   ├── css
+    │   │   └── style.css
+    │   └── js
+    │       └── main.js
+    └── index.html          [Experiment entry point]
+
+11 directories, 9 files
+```
