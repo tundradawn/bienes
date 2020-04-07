@@ -8,7 +8,7 @@ To ease development times we'll use [browser-sync](https://www.browsersync.io/do
 - Let's install [browser-sync](https://www.browsersync.io/docs/command-line/) with: `npm install -g browser-sync`.
 
 ### Finally:
-- `browser-sync -f "*.js"` will start [browser-sync](https://www.browsersync.io/docs/command-line/), every time we edit a js file it'll automatically update. A browser window will automatically be opened for us as well.
+- `browser-sync -f "**/*.js"` will start [browser-sync](https://www.browsersync.io/docs/command-line/), every time we edit a js file it'll automatically update. A browser window will automatically be opened for us as well.
 
 
 
