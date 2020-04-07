@@ -1,4 +1,4 @@
-# Bienes 🧮🤖
+# Bienes 🎨
 
 Spanish for Assets, Bienes is intended to store general Visual assets, experiments & elements created with p5.js.
 
