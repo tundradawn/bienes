@@ -2,6 +2,13 @@
 
 Spanish for Assets, Bienes is intended to store general Visual assets, experiments & elements created with p5.js.
 
+## Getting started
+To ease development times we'll use [browser-sync](https://www.browsersync.io/docs/command-line/) to serve the files locally.
+### Installation
+- Let's install [browser-sync](https://www.browsersync.io/docs/command-line/) with: `npm install -g browser-sync`.
+
+### Finally:
+- `browser-sync -f "*.js"` will start [browser-sync](https://www.browsersync.io/docs/command-line/), every time we edit a js file it'll automatically update. A browser window will automatically be opened for us as well.
 
 
 
