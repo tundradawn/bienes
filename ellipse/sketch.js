@@ -1,5 +1,6 @@
 let test;
 let elements = [];
+let ceiling = 10;
 function setup() {
   canvasWidth = 800;
   canvasHeight = 600;
@@ -7,6 +8,8 @@ function setup() {
   ellipseSize = 0;
   ellipseOpacity = 1;
   frameCounter = 0;
+  // 10% margin
+  ceiling = ceiling - (ceiling * 0.10);
   elements.push(new simpleEllipse(10, 10, 100, 1));
 }
 
@@ -16,8 +19,10 @@ function draw() {
     elements[i].done(function(birth){
       console.log('dead');
       elements[i] = new simpleEllipse(10, 10, 100, 1);
-      elements.push(new simpleEllipse(10, 10, 100, 1));
-    }, function(){  
+      if(elements.length < ceiling){
+        elements.push(new simpleEllipse(10, 10, 100, 1));
+      }
+    }, function(){
      elements[i].animate();
      elements[i].display();
     });
@@ -32,7 +37,7 @@ class simpleEllipse {
     this.opacity = opacity;
     this.size = size;
   }
-  
+
   animate() {
     this.size = this.size +1;
     this.opacity = this.opacity - 0.005;
