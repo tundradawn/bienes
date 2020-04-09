@@ -1,6 +1,6 @@
 let test;
 let elements = [];
-let ceiling = 10;
+let ceiling = 60;
 function setup() {
   canvasWidth = 800;
   canvasHeight = 600;
